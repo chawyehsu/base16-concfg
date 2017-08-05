@@ -1,0 +1,18 @@
+{
+	"black":        "#0b1c2c",
+	"dark_blue":    "#aabcce",
+	"dark_green":   "#405c79",
+	"dark_cyan":    "#cbd6e2",
+	"dark_red":     "#bfbf56",
+	"dark_magenta": "#bf568b",
+	"dark_yellow":  "#627e99",
+	"gray":         "#e5ebf1",
+	"dark_gray":    "#223b54",
+	"blue":         "#8b56bf",
+	"green":        "#56bf8b",
+	"cyan":         "#568bbf",
+	"red":          "#bf8b56",
+	"magenta":      "#bf5656",
+	"yellow":       "#8bbf56",
+	"white":        "#f7f9fb"
+}
