@@ -6,13 +6,35 @@
 	"dark_red":     "#3E9688",
 	"dark_magenta": "#4C963E",
 	"dark_yellow":  "#3E4C96",
-	"gray":         "#A7CEC8",
+	"gray":         "#D2E7E4",
 	"dark_gray":    "#0B342D",
 	"blue":         "#5F9C92",
 	"green":        "#184E45",
-	"cyan":         "#3E965B",
+	"cyan":         "#81B5AC",
 	"red":          "#3E7996",
-	"magenta":      "#D2E7E4",
+	"magenta":      "#3E965B",
 	"yellow":       "#2B685E",
-	"white":        "#81B5AC"
+	"white":        "#A7CEC8",
+
+    "screen_colors": "white,black",
+	"popup_colors":  "dark_magenta,gray",
+
+	"font_face":      "Consolas",
+	"font_true_type": true,
+	"font_size":      "8x20",
+	"font_weight":    700,
+
+	"cursor_size": "large",
+
+	"window_size":        "85x26",
+	"screen_buffer_size": "80x200",
+
+	"command_history_length": 50,
+	"num_history_buffers":     4,
+
+	"quick_edit":  false,
+	"insert_mode": true,
+	"fullscreen":  false,
+
+	"load_console_IME":  true
 }
