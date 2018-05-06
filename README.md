@@ -41,7 +41,11 @@ other as minor (bright) colors.
 | Bright Yellow  | Light Yellow | Yellow      | 0E         |
 | Bright White   | Brigh tWhite | White       | 0F         |
 
-**About command line token colors**
+To determine that if a theme's color mapping is correct, execute `git diff` in
+a dirty git directory, and see the diff result. **Might** correct if the diff colors are
+red & green, otherwise incorrect definitely.
+
+### About command line token colors
 
 Since PowerShell 5, the new [PSReadline] brings command line tokens colours feature,
 the token (e.g. String, Parameter) of command line has its own color, execute
