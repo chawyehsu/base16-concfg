@@ -41,6 +41,25 @@ other as minor (bright) colors.
 | Bright Yellow  | Light Yellow | Yellow      | 0E         |
 | Bright White   | Brigh tWhite | White       | 0F         |
 
+**About command line token colors**
+
+Since PowerShell 5, the new [PSReadline] brings command line tokens colours feature,
+the token (e.g. String, Parameter) of command line has its own color, execute
+`Get-PSReadlineOption` in PowerShell then you will see some attributes like
+`KeywordForegroundColor`, `ParameterForegroundColor`. They have default values,
+but these values don't match the theme color mapping very well, and cause bad
+readability to commands, there is a discussion [here](https://github.com/lukesampson/concfg/issues/10).
+
+To improve the readability or the whole style of theming, we have to use [Set-PSReadlineOption]
+to change the command line tokens colours. Below are two screenshots show the difference
+(see those two commands). Take a look at `command-line-token-color-mapping.ps1` in the scripts
+directory for more information.
+
+| Default token colors | Matching token colors |
+|----------------------|-----------------------|
+| ![without-token-color-mapping.png](docs/without-token-color-mapping.png) | ![with-token-color-mapping.png](docs/with-token-color-mapping.png) |
+
+
 Build
 -----
 
@@ -66,6 +85,8 @@ License
 
 MIT
 
+[Set-PSReadlineOption]: https://docs.microsoft.com/en-us/powershell/module/psreadline/Set-PSReadlineOption
+[PSReadline]: https://docs.microsoft.com/en-us/powershell/module/psreadline/
 [base16-builder-typescript]: https://github.com/golf1052/base16-builder-typescript
 [ANSI escape color]: https://en.wikipedia.org/wiki/ANSI_escape_code#Colors
 [^1]: https://github.com/dotnet/corefx/blob/5e36ca02d2594f715da829aafaf7af2b554dfcdf/src/System.Console/src/System/ConsolePal.Unix.cs#L578-L580
