@@ -16,12 +16,12 @@
 	"yellow":       "#686A71",
 	"white":        "#A9AAAE",
 
-    "screen_colors": "white,black",
+	"screen_colors": "white,black",
 	"popup_colors":  "dark_magenta,gray",
 
 	"font_face":      "Consolas",
 	"font_true_type": true,
-	"font_size":      "8x20",
+	"font_size":      "0x20",
 	"font_weight":    700,
 
 	"cursor_size": "large",
