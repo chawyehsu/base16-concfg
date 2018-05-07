@@ -81,7 +81,7 @@ Usage
 Please follow [concfg](https://github.com/lukesampson/concfg) guide to import presets. for example:
 
 ``` powershell
-concfg import https://raw.githubusercontent.com/h404bi/base16-concfg/master/presets/base16-solarized-dark.json
+concfg import default solarized-dark
 ```
 
 License
