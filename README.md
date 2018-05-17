@@ -56,7 +56,7 @@ readability to commands, there is a discussion [here](https://github.com/lukesam
 
 To improve the readability or the whole style of theming, we have to use [Set-PSReadlineOption]
 to change the command line tokens colours. Below are two screenshots show the difference
-(see those two commands). Take a look at `command-line-token-color-mapping.ps1` in the scripts
+(see those two commands). Take a look at [`command-line-token-color-mapping.ps1`](scripts/command-line-token-color-mapping.ps1) in the scripts
 directory for more information.
 
 | Default token colors | Matching token colors |
