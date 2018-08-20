@@ -59,6 +59,8 @@ to change the command line tokens colours. Below are two screenshots show the di
 (see those two commands). Take a look at [`command-line-token-color-mapping.ps1`](scripts/command-line-token-color-mapping.ps1) in the scripts
 directory for more information.
 
+**NOTE**: the `command-line-token-color-mapping.ps1` script has been [integrated](https://github.com/lukesampson/concfg/pull/46) into [concfg](https://github.com/lukesampson/concfg), you could use `concfg tokencolor` command to set up the command line token colors.
+
 | Default token colors | Matching token colors |
 |----------------------|-----------------------|
 | ![without-token-color-mapping.png](docs/without-token-color-mapping.png) | ![with-token-color-mapping.png](docs/with-token-color-mapping.png) |
@@ -78,10 +80,16 @@ yarn global add base16-builder-typescript
 Usage
 -----
 
-Please follow [concfg](https://github.com/lukesampson/concfg) guide to import presets. for example:
+Quick start example:
 
 ``` powershell
-concfg import default solarized-dark
+concfg import https://raw.githubusercontent.com/h404bi/base16-concfg/master/presets/base16-solarized-dark.json
+```
+
+For advanced usage, please follow [concfg](https://github.com/lukesampson/concfg) guide/help to import presets.
+
+``` powershell
+concfg help
 ```
 
 License
