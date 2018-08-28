@@ -33,13 +33,13 @@ other as minor (bright) colors. **Only Windows 10 TH2+ support ANSI Escape Seque
 | Cyan           | \x1b[36m        | \x1b[46m        | Aqua         | DarkCyan    | 03         |
 | White          | \x1b[37m        | \x1b[47m        | White        | Gray        | 07         |
 | Bright Black   | \x1b[90m        | \x1b[100m       | Gray         | DarkGray    | 08         |
-| Bright Red     | \x1b[91m        | \x1b[101m       | Light Red    | Red         | 0C         |
-| Bright Green   | \x1b[92m        | \x1b[102m       | Light Green  | Green       | 0A         |
-| Bright Yellow  | \x1b[93m        | \x1b[103m       | Light Yellow | Yellow      | 0E         |
+| Bright Red     | \x1b[91m        | \x1b[101m       | Light Red    | Red         | 12         |
+| Bright Green   | \x1b[92m        | \x1b[102m       | Light Green  | Green       | 10         |
+| Bright Yellow  | \x1b[93m        | \x1b[103m       | Light Yellow | Yellow      | 14         |
 | Bright Blue    | \x1b[94m        | \x1b[104m       | Light Blue   | Blue        | 09         |
-| Bright Magenta | \x1b[95m        | \x1b[105m       | Light Purple | Magenta     | 0D         |
-| Bright Cyan    | \x1b[96m        | \x1b[106m       | Light Aqua   | Cyan        | 0B         |
-| Bright White   | \x1b[97m        | \x1b[107m       | Brigh tWhite | White       | 0F         |
+| Bright Magenta | \x1b[95m        | \x1b[105m       | Light Purple | Magenta     | 13         |
+| Bright Cyan    | \x1b[96m        | \x1b[106m       | Light Aqua   | Cyan        | 11         |
+| Bright White   | \x1b[97m        | \x1b[107m       | Brigh tWhite | White       | 15         |
 
 To determine that if a theme's color mapping is correct, execute `git diff` in
 a dirty git directory, and see the diff result. **Might** correct if the diff colors are
