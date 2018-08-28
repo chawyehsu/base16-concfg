@@ -22,24 +22,24 @@ The colors of Windows Console doesn't map the [ANSI escape color] [^1].
 We should treat those most `dark_` colors as major (normal) colors and 
 other as minor (bright) colors.
 
-| ANSI name      | cmd.exe      | PowerShell  | ColorTable |
-|----------------|--------------|-------------|------------|
-| Black          | Black        | Black       | 00         |
-| Blue           | Blue         | DarkBlue    | 01         |
-| Green          | Green        | DarkGreen   | 02         |
-| Cyan           | Aqua         | DarkCyan    | 03         |
-| Red            | Red          | DarkRed     | 04         |
-| Magenta        | Purple       | DarkMagenta | 05         |
-| Yellow         | Yellow       | DarkYellow  | 06         |
-| White          | White        | Gray        | 07         |
-| Bright Black   | Gray         | DarkGray    | 08         |
-| Bright Blue    | Light Blue   | Blue        | 09         |
-| Bright Green   | Light Green  | Green       | 0A         |
-| Bright Cyan    | Light Aqua   | Cyan        | 0B         |
-| Bright Red     | Light Red    | Red         | 0C         |
-| Bright Magenta | Light Purple | Magenta     | 0D         |
-| Bright Yellow  | Light Yellow | Yellow      | 0E         |
-| Bright White   | Brigh tWhite | White       | 0F         |
+| ANSI/VT name   | ANSI/VT Forgecolor Code | cmd.exe      | PowerShell  | ColorTable |
+|----------------|-------------------------|--------------|-------------|------------|
+| Black          | \x1b[30m                | Black        | Black       | 00         |
+| Red            | \x1b[31m                | Red          | DarkRed     | 04         |
+| Green          | \x1b[32m                | Green        | DarkGreen   | 02         |
+| Yellow         | \x1b[33m                | Yellow       | DarkYellow  | 06         |
+| Blue           | \x1b[34m                | Blue         | DarkBlue    | 01         |
+| Magenta        | \x1b[35m                | Purple       | DarkMagenta | 05         |
+| Cyan           | \x1b[36m                | Aqua         | DarkCyan    | 03         |
+| White          | \x1b[37m                | White        | Gray        | 07         |
+| Bright Black   | \x1b[90m                | Gray         | DarkGray    | 08         |
+| Bright Red     | \x1b[91m                | Light Red    | Red         | 0C         |
+| Bright Green   | \x1b[92m                | Light Green  | Green       | 0A         |
+| Bright Yellow  | \x1b[93m                | Light Yellow | Yellow      | 0E         |
+| Bright Blue    | \x1b[94m                | Light Blue   | Blue        | 09         |
+| Bright Magenta | \x1b[95m                | Light Purple | Magenta     | 0D         |
+| Bright Cyan    | \x1b[96m                | Light Aqua   | Cyan        | 0B         |
+| Bright White   | \x1b[97m                | Brigh tWhite | White       | 0F         |
 
 To determine that if a theme's color mapping is correct, execute `git diff` in
 a dirty git directory, and see the diff result. **Might** correct if the diff colors are
