@@ -20,7 +20,7 @@ which is based on sixteen colours, would be the best themes solution.
 But there are color mapping difference between Windows Console and other terminals or applications.
 The colors of Windows Console doesn't map the [ANSI escape color] [^1].
 We should treat those most `dark_` colors as major (normal) colors and 
-other as minor (bright) colors.
+other as minor (bright) colors. **Only Windows 10 TH2+ support ANSI Escape Sequences.**
 
 | ANSI/VT name   | ANSI/VT FG Code | ANSI/VT BG Code | cmd.exe      | PowerShell  | ColorTable |
 |----------------|-----------------|-----------------|--------------|-------------|------------|
