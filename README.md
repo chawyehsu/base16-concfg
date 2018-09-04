@@ -18,7 +18,7 @@ therefore [base16](http://chriskempson.com/projects/base16/),
 which is based on sixteen colours, would be the best themes solution.
 
 But there are color mapping difference between Windows Console and other terminals or applications.
-The colors of Windows Console doesn't map the [ANSI escape color] [^1].
+The colors of Windows Console doesn't map the [ANSI escape color], explained [here].
 We should treat those most `dark_` colors as major (normal) colors and 
 other as minor (bright) colors. **Only Windows 10 TH2+ support ANSI Escape Sequences.**
 
@@ -101,5 +101,5 @@ MIT
 [PSReadline]: https://docs.microsoft.com/en-us/powershell/module/psreadline/
 [base16-builder-typescript]: https://github.com/golf1052/base16-builder-typescript
 [ANSI escape color]: https://en.wikipedia.org/wiki/ANSI_escape_code#Colors
-[^1]: https://github.com/dotnet/corefx/blob/5e36ca02d2594f715da829aafaf7af2b554dfcdf/src/System.Console/src/System/ConsolePal.Unix.cs#L578-L580
+[here]: https://github.com/dotnet/corefx/blob/5e36ca02d2594f715da829aafaf7af2b554dfcdf/src/System.Console/src/System/ConsolePal.Unix.cs#L577-L603
 [base16 styling guidelines]: https://github.com/chriskempson/base16/blob/master/styling.md
