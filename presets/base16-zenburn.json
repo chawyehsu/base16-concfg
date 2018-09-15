@@ -1,5 +1,5 @@
 {
-	"black":        "#3f3f3f",
+	"black":        "#383838",
 	"dark_blue":    "#7cb8bb",
 	"dark_green":   "#5f7f5f",
 	"dark_cyan":    "#93e0e3",
@@ -13,7 +13,7 @@
 	"cyan":         "#dcdccc",
 	"red":          "#dfaf8f",
 	"magenta":      "#000000",
-	"yellow":       "#4f4f4f",
+	"yellow":       "#6f6f6f",
 	"white":        "#c0c0c0",
 	"screen_colors": "white,black",
 	"popup_colors":  "dark_magenta,gray"

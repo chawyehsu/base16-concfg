@@ -1,5 +1,5 @@
 {
-	"black":        "#1e1f29",
+	"black":        "#282a36",
 	"dark_blue":    "#57c7ff",
 	"dark_green":   "#5af78e",
 	"dark_cyan":    "#9aedfe",
@@ -9,12 +9,12 @@
 	"gray":         "#f1f1f0",
 	"dark_gray":    "#34353e",
 	"blue":         "#a5a5a9",
-	"green":        "#4a4b53",
-	"cyan":         "#eff0eb",
+	"green":        "#43454f",
+	"cyan":         "#e2e4e5",
 	"red":          "#ff9f43",
 	"magenta":      "#b2643c",
 	"yellow":       "#78787e",
-	"white":        "#f1f1f0",
+	"white":        "#eff0eb",
 	"screen_colors": "white,black",
 	"popup_colors":  "dark_magenta,gray"
 }
