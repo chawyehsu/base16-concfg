@@ -82,8 +82,14 @@ Usage
 
 Quick start example:
 
+1. color scheme
 ``` powershell
 concfg import https://raw.githubusercontent.com/h404bi/base16-concfg/master/presets/base16-solarized-dark.json
+```
+
+2. some basic settings (optional)
+``` powershell
+concfg import https://raw.githubusercontent.com/h404bi/base16-concfg/master/presets/basic.json
 ```
 
 For advanced usage, please follow [concfg](https://github.com/lukesampson/concfg) guide/help to import presets.
