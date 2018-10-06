@@ -19,20 +19,35 @@
 #   https://github.com/lzybkr/PSReadLine#installation
 
 if (Get-Module -ListAvailable -Name "PSReadline") {
-    # Reset
-    Set-PSReadlineOption -ResetTokenColors
+    # PSReadLine 1
+    if ((Get-Module -ListAvailable -Name "PSReadline").Version.Major -eq 1) {
+        # Reset
+        Set-PSReadlineOption -ResetTokenColors
 
-    $options = Get-PSReadlineOption
-
-    # Token Foreground                                # base16 colors
-    $options.CommandForegroundColor   = "DarkBlue"    # base0D
-    $options.CommentForegroundColor   = "Yellow"      # base03
-    $options.KeywordForegroundColor   = "DarkMagenta" # base0E
-    $options.MemberForegroundColor    = "DarkBlue"    # base0D
-    $options.NumberForegroundColor    = "Red"         # base09
-    $options.OperatorForegroundColor  = "DarkCyan"    # base0C
-    $options.ParameterForegroundColor = "Red"         # base09
-    $options.StringForegroundColor    = "DarkGreen"   # base0B
-    $options.TypeForegroundColor      = "DarkYellow"  # base0A
-    $options.VariableForegroundColor  = "DarkRed"     # base08
+        $options = Get-PSReadlineOption
+        # Token Foreground                                # base16 colors
+        $options.CommandForegroundColor   = "DarkBlue"    # base0D
+        $options.CommentForegroundColor   = "Yellow"      # base03
+        $options.KeywordForegroundColor   = "DarkMagenta" # base0E
+        $options.MemberForegroundColor    = "DarkBlue"    # base0D
+        $options.NumberForegroundColor    = "Red"         # base09
+        $options.OperatorForegroundColor  = "DarkCyan"    # base0C
+        $options.ParameterForegroundColor = "Red"         # base09
+        $options.StringForegroundColor    = "DarkGreen"   # base0B
+        $options.TypeForegroundColor      = "DarkYellow"  # base0A
+        $options.VariableForegroundColor  = "DarkRed"     # base08
+    } else {
+        $options = Get-PSReadlineOption
+        # Token Foreground                                # base16 colors
+        $options.CommandColor   = "$([char]0x1b)[34m"     # base0D
+        $options.CommentColor   = "$([char]0x1b)[93m"     # base03
+        $options.KeywordColor   = "$([char]0x1b)[35m"     # base0E
+        $options.MemberColor    = "$([char]0x1b)[34m"     # base0D
+        $options.NumberColor    = "$([char]0x1b)[91m"     # base09
+        $options.OperatorColor  = "$([char]0x1b)[36m"     # base0C
+        $options.ParameterColor = "$([char]0x1b)[91m"     # base09
+        $options.StringColor    = "$([char]0x1b)[32m"     # base0B
+        $options.TypeColor      = "$([char]0x1b)[33m"     # base0A
+        $options.VariableColor  = "$([char]0x1b)[31m"     # base08
+    }
 }
