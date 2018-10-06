@@ -101,7 +101,7 @@ concfg help
 License
 -------
 
-MIT
+MIT @ [Chawye Hsu](https://h404bi.com)
 
 [Set-PSReadlineOption]: https://docs.microsoft.com/en-us/powershell/module/psreadline/Set-PSReadlineOption
 [PSReadline]: https://docs.microsoft.com/en-us/powershell/module/psreadline/
