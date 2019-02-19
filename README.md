@@ -46,10 +46,11 @@ We need to remapping it manually. Here is the mapping table.
 only Windows 10 v1511 (TH2, build 10586) or later support ANSI Escape Sequences.
 See [details](https://stackoverflow.com/questions/16755142/how-to-make-win32-console-recognize-ansi-vt100-escape-sequences).
 
-So if you want to change the `Red` color of Windows Console, you should modify `ColorTable[04]`
-instead of `ColorTable[01]`. This is very important, wrong color mapping could make your theme
-looks bad. To determine that if a theme's color mapping is correct, run `git diff` in a dirty
-git directory, and see the diff result. Normally the diff colors should be `Red` and `Green`.
+So if you want to change the `Red` color of Windows Console (or `DarkRed` of PowerShell),
+you should modify `ColorTable[04]` instead of `ColorTable[01]`. his is very important,
+wrong color mapping could make your theme ooks bad. To determine that if a theme's
+color mapping is correct, run `git diff` in a dirty it directory, and see
+the diff result. Normally the diff colors should be `Red` and `Green`.
 
 ### About command line token colors
 
@@ -59,12 +60,11 @@ the token (e.g. String, Parameter) of command line has its own color, execute
 `KeywordForegroundColor`, `ParameterForegroundColor`, and they have default values.
 
 Base16 redefined the 16 colors palette, after using a base16 theme, `Red2Red` or
-`BrightMagenta2BrightMagenta` become false. `Red`(`ColorTable[04]`) can be a `blue` color
-or a `bright gray` color, or to say grayscale (*In Base16, colors base00 to base07 are
-typically variations of a shade and run from darkest to lightest.*). The 16 colors of Windows Console
-are **HEAVILY CHANGED** after importing base16 themes, and affects the command line tokens colors.
-Base16 themes break the color mapping, and cause bad readability to commands,
-there is a discussion [here](https://github.com/lukesampson/concfg/issues/10).
+`BrightMagenta2BrightMagenta` become false. `ColorTable[12]`(`Red` of PowerShell)
+can be a `orange (#ff9f43)` color in `base16-snazzy` or a `pink` color in another base16 theme,
+or even grayscale (*In Base16, colors base00 to base07 are typically variations of a shade and run from darkest to lightest.*). The 16 colors of Windows Console are **HEAVILY CHANGED** after importing base16 themes,
+and affects the command line tokens colors. Base16 themes break the color mapping,
+and cause bad readability to commands, there is a discussion [here](https://github.com/lukesampson/concfg/issues/10).
 
 But we still want to use base16 themes, since is a very cool architecture for building themes.
 To solve the readability issue, we have to use [Set-PSReadlineOption]
