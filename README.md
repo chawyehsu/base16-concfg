@@ -1,9 +1,10 @@
-base16-concfg
-=============
+<div align="center">
+    <h1 align="center">base16-concfg</h1>
+</div>
 
 The real Chris Kempson's [base16](https://github.com/chriskempson/base16)
 for [concfg](https://github.com/lukesampson/concfg),
-which is utility to import and export Windows console settings bundled with
+which is an utility to import and export Windows console settings bundled with
 [Scoop](https://github.com/lukesampson/scoop),
 a command-line installer for Windows created by Luke Sampson.
 
@@ -13,58 +14,71 @@ I use [base16-builder-typescript].
 About the Color Mapping
 -----------------------
 
-Windows Console (conhost.exe/cmd.exe/Powershell) only use 16 colors palette,
+Windows Console (ConHost.exe) only use 16 colors palette,
 therefore [base16](http://chriskempson.com/projects/base16/),
-which is based on sixteen colours, would be the best themes solution.
+which is based on 16 colors, would be the best themes solution for ConHost.
 
 But there are color mapping difference between Windows Console and other terminals or applications.
-The colors of Windows Console doesn't map the [ANSI escape color], explained [here].
-We should treat those most `dark_` colors as major (normal) colors and 
-other as minor (bright) colors. **Only Windows 10 TH2+ support ANSI Escape Sequences.**
+The order of `ColorTable` of Windows Console doesn't map the [ANSI escape color], explained [here].
+We need to remapping it manually. Here is the mapping table.
 
-| ANSI/VT name   | ANSI/VT FG Code | ANSI/VT BG Code | cmd.exe      | PowerShell  | ColorTable |
-|----------------|-----------------|-----------------|--------------|-------------|------------|
-| Black          | \x1b[30m        | \x1b[40m        | Black        | Black       | 00         |
-| Red            | \x1b[31m        | \x1b[41m        | Red          | DarkRed     | 04         |
-| Green          | \x1b[32m        | \x1b[42m        | Green        | DarkGreen   | 02         |
-| Yellow         | \x1b[33m        | \x1b[43m        | Yellow       | DarkYellow  | 06         |
-| Blue           | \x1b[34m        | \x1b[44m        | Blue         | DarkBlue    | 01         |
-| Magenta        | \x1b[35m        | \x1b[45m        | Purple       | DarkMagenta | 05         |
-| Cyan           | \x1b[36m        | \x1b[46m        | Aqua         | DarkCyan    | 03         |
-| White          | \x1b[37m        | \x1b[47m        | White        | Gray        | 07         |
-| Bright Black   | \x1b[90m        | \x1b[100m       | Gray         | DarkGray    | 08         |
-| Bright Red     | \x1b[91m        | \x1b[101m       | Light Red    | Red         | 12         |
-| Bright Green   | \x1b[92m        | \x1b[102m       | Light Green  | Green       | 10         |
-| Bright Yellow  | \x1b[93m        | \x1b[103m       | Light Yellow | Yellow      | 14         |
-| Bright Blue    | \x1b[94m        | \x1b[104m       | Light Blue   | Blue        | 09         |
-| Bright Magenta | \x1b[95m        | \x1b[105m       | Light Purple | Magenta     | 13         |
-| Bright Cyan    | \x1b[96m        | \x1b[106m       | Light Aqua   | Cyan        | 11         |
-| Bright White   | \x1b[97m        | \x1b[107m       | Brigh tWhite | White       | 15         |
+| ANSI/VT name   | ANSI/VT FG Code* | ANSI/VT BG Code | cmd.exe      | PowerShell  | ColorTable |
+|----------------|------------------|-----------------|--------------|-------------|------------|
+| Black          | \x1b[30m         | \x1b[40m        | Black        | Black       | 00         |
+| Red            | \x1b[31m         | \x1b[41m        | Red          | DarkRed     | 04         |
+| Green          | \x1b[32m         | \x1b[42m        | Green        | DarkGreen   | 02         |
+| Yellow         | \x1b[33m         | \x1b[43m        | Yellow       | DarkYellow  | 06         |
+| Blue           | \x1b[34m         | \x1b[44m        | Blue         | DarkBlue    | 01         |
+| Magenta        | \x1b[35m         | \x1b[45m        | Purple       | DarkMagenta | 05         |
+| Cyan           | \x1b[36m         | \x1b[46m        | Aqua         | DarkCyan    | 03         |
+| White          | \x1b[37m         | \x1b[47m        | White        | Gray        | 07         |
+| Bright Black   | \x1b[90m         | \x1b[100m       | Gray         | DarkGray    | 08         |
+| Bright Red     | \x1b[91m         | \x1b[101m       | Light Red    | Red         | 12         |
+| Bright Green   | \x1b[92m         | \x1b[102m       | Light Green  | Green       | 10         |
+| Bright Yellow  | \x1b[93m         | \x1b[103m       | Light Yellow | Yellow      | 14         |
+| Bright Blue    | \x1b[94m         | \x1b[104m       | Light Blue   | Blue        | 09         |
+| Bright Magenta | \x1b[95m         | \x1b[105m       | Light Purple | Magenta     | 13         |
+| Bright Cyan    | \x1b[96m         | \x1b[106m       | Light Aqua   | Cyan        | 11         |
+| Bright White   | \x1b[97m         | \x1b[107m       | Brigh tWhite | White       | 15         |
 
-To determine that if a theme's color mapping is correct, execute `git diff` in
-a dirty git directory, and see the diff result. **Might** correct if the diff colors are
-red & green, otherwise incorrect definitely.
+*Notice if you want to use ANSI Escape Sequences in Windows Console, you should know that
+only Windows 10 v1511 (TH2, build 10586) or later support ANSI Escape Sequences.
+See [details](https://stackoverflow.com/questions/16755142/how-to-make-win32-console-recognize-ansi-vt100-escape-sequences).
+
+So if you want to change the `Red` color of Windows Console, you should modify `ColorTable[04]`
+instead of `ColorTable[01]`. This is very important, wrong color mapping could make your theme
+looks bad. To determine that if a theme's color mapping is correct, run `git diff` in a dirty
+git directory, and see the diff result. Normally the diff colors should be `Red` and `Green`.
 
 ### About command line token colors
 
-Since PowerShell 5, the new [PSReadline] brings command line tokens colours feature,
+Since PowerShell 5, the new [PSReadline] brings command line tokens colors feature,
 the token (e.g. String, Parameter) of command line has its own color, execute
 `Get-PSReadlineOption` in PowerShell then you will see some attributes like
-`KeywordForegroundColor`, `ParameterForegroundColor`. They have default values,
-but these values don't match the theme color mapping very well, and cause bad
-readability to commands, there is a discussion [here](https://github.com/lukesampson/concfg/issues/10).
+`KeywordForegroundColor`, `ParameterForegroundColor`, and they have default values.
 
-To improve the readability or the whole style of theming, we have to use [Set-PSReadlineOption]
-to change the command line tokens colours. Below are two screenshots show the difference
-(see those two commands). Take a look at [`command-line-token-color-mapping.ps1`](scripts/command-line-token-color-mapping.ps1) in the scripts
-directory for more information.
+Base16 redefined the 16 colors palette, after using a base16 theme, `Red2Red` or
+`BrightMagenta2BrightMagenta` become false. `Red`(`ColorTable[04]`) can be a `blue` color
+or a `bright gray` color, or to say grayscale (*In Base16, colors base00 to base07 are
+typically variations of a shade and run from darkest to lightest.*). The 16 colors of Windows Console
+are **HEAVILY CHANGED** after importing base16 themes, and affects the command line tokens colors.
+Base16 themes break the color mapping, and cause bad readability to commands,
+there is a discussion [here](https://github.com/lukesampson/concfg/issues/10).
 
-**NOTE**: the `command-line-token-color-mapping.ps1` script has been [integrated](https://github.com/lukesampson/concfg/pull/46) into [concfg](https://github.com/lukesampson/concfg), you could use `concfg tokencolor` command to set up the command line token colors.
+But we still want to use base16 themes, since is a very cool architecture for building themes.
+To solve the readability issue, we have to use [Set-PSReadlineOption]
+to remapping the command line tokens colors to match base16 theme. Below are two screenshots
+show the difference after remapping command line tokens colors (see those two commands).
 
-| Default token colors | Matching token colors |
+| Default token colors in base16-tomorrow-night | Remapping token colors in base16-tomorrow-night  |
 |----------------------|-----------------------|
 | ![without-token-color-mapping.png](docs/without-token-color-mapping.png) | ![with-token-color-mapping.png](docs/with-token-color-mapping.png) |
 
+I wrote a powershell script to do this job, you can take a look at [`command-line-token-color-mapping.ps1`](scripts/command-line-token-color-mapping.ps1) in the scripts directory for details.
+
+**P.S.**: the script has been [integrated](https://github.com/lukesampson/concfg/pull/46) into [concfg](https://github.com/lukesampson/concfg), you could use `concfg tokencolor` command to set up the command line token colors.
+
+**NOTE**: If you removed base16 themes from your Windows Console, you should also change the command line tokens colors back. Otherwise it may causes a bad look for your console.
 
 Build
 -----
@@ -87,7 +101,7 @@ Quick start example:
 concfg import https://raw.githubusercontent.com/h404bi/base16-concfg/master/presets/base16-solarized-dark.json
 ```
 
-2. some basic settings (optional)
+2. some opinioned settings (optional)
 ``` powershell
 concfg import https://raw.githubusercontent.com/h404bi/base16-concfg/master/presets/basic.json
 ```
@@ -101,7 +115,7 @@ concfg help
 License
 -------
 
-MIT @ [Chawye Hsu](https://h404bi.com)
+MIT @ [Chawye Hsu](https://www.h404bi.com)
 
 [Set-PSReadlineOption]: https://docs.microsoft.com/en-us/powershell/module/psreadline/Set-PSReadlineOption
 [PSReadline]: https://docs.microsoft.com/en-us/powershell/module/psreadline/
