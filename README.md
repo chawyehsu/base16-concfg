@@ -25,22 +25,22 @@ We need to remapping it manually. Here is the mapping table.
 
 | ANSI/VT name   | ANSI/VT FG Code* | ANSI/VT BG Code | cmd.exe      | PowerShell  | ColorTable |
 |----------------|------------------|-----------------|--------------|-------------|------------|
-| Black          | \x1b[30m         | \x1b[40m        | Black        | Black       | 00         |
-| Red            | \x1b[31m         | \x1b[41m        | Red          | DarkRed     | 04         |
-| Green          | \x1b[32m         | \x1b[42m        | Green        | DarkGreen   | 02         |
-| Yellow         | \x1b[33m         | \x1b[43m        | Yellow       | DarkYellow  | 06         |
-| Blue           | \x1b[34m         | \x1b[44m        | Blue         | DarkBlue    | 01         |
-| Magenta        | \x1b[35m         | \x1b[45m        | Purple       | DarkMagenta | 05         |
-| Cyan           | \x1b[36m         | \x1b[46m        | Aqua         | DarkCyan    | 03         |
-| White          | \x1b[37m         | \x1b[47m        | White        | Gray        | 07         |
-| Bright Black   | \x1b[90m         | \x1b[100m       | Gray         | DarkGray    | 08         |
-| Bright Red     | \x1b[91m         | \x1b[101m       | Light Red    | Red         | 12         |
-| Bright Green   | \x1b[92m         | \x1b[102m       | Light Green  | Green       | 10         |
-| Bright Yellow  | \x1b[93m         | \x1b[103m       | Light Yellow | Yellow      | 14         |
-| Bright Blue    | \x1b[94m         | \x1b[104m       | Light Blue   | Blue        | 09         |
-| Bright Magenta | \x1b[95m         | \x1b[105m       | Light Purple | Magenta     | 13         |
-| Bright Cyan    | \x1b[96m         | \x1b[106m       | Light Aqua   | Cyan        | 11         |
-| Bright White   | \x1b[97m         | \x1b[107m       | Brigh tWhite | White       | 15         |
+| Black          | \`e[30m          | \`e[40m         | Black        | Black       | 00         |
+| Red            | \`e[31m          | \`e[41m         | Red          | DarkRed     | 04         |
+| Green          | \`e[32m          | \`e[42m         | Green        | DarkGreen   | 02         |
+| Yellow         | \`e[33m          | \`e[43m         | Yellow       | DarkYellow  | 06         |
+| Blue           | \`e[34m          | \`e[44m         | Blue         | DarkBlue    | 01         |
+| Magenta        | \`e[35m          | \`e[45m         | Purple       | DarkMagenta | 05         |
+| Cyan           | \`e[36m          | \`e[46m         | Aqua         | DarkCyan    | 03         |
+| White          | \`e[37m          | \`e[47m         | White        | Gray        | 07         |
+| Bright Black   | \`e[90m          | \`e[100m        | Gray         | DarkGray    | 08         |
+| Bright Red     | \`e[91m          | \`e[101m        | Light Red    | Red         | 12         |
+| Bright Green   | \`e[92m          | \`e[102m        | Light Green  | Green       | 10         |
+| Bright Yellow  | \`e[93m          | \`e[103m        | Light Yellow | Yellow      | 14         |
+| Bright Blue    | \`e[94m          | \`e[104m        | Light Blue   | Blue        | 09         |
+| Bright Magenta | \`e[95m          | \`e[105m        | Light Purple | Magenta     | 13         |
+| Bright Cyan    | \`e[96m          | \`e[106m        | Light Aqua   | Cyan        | 11         |
+| Bright White   | \`e[97m          | \`e[107m        | Brigh tWhite | White       | 15         |
 
 *Notice if you want to use ANSI Escape Sequences in Windows Console, you should know that
 only Windows 10 v1511 (TH2, build 10586) or later support ANSI Escape Sequences.
