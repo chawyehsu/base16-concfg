@@ -17,9 +17,10 @@ About the Color Mapping
 
 Windows Console (ConHost.exe) only use 16 colors palette,
 therefore [base16](http://chriskempson.com/projects/base16/),
-which is based on 16 colors, would be the best themes solution for ConHost.
+which is based on 16 colors, is a good theme solution for ConHost.
 
-But there are color mapping difference between Windows Console and other terminals or applications.
+Before appling base16 themes, we should know that there are color mapping
+difference between Windows Console and other terminals or applications.
 The order of `ColorTable` of Windows Console doesn't map the [ANSI escape color], explained [here].
 We need to remapping it manually. Here is the mapping table.
 
@@ -47,8 +48,8 @@ only Windows 10 v1511 (TH2, build 10586) or later support ANSI Escape Sequences.
 See [details](https://stackoverflow.com/questions/16755142/how-to-make-win32-console-recognize-ansi-vt100-escape-sequences).
 
 So if you want to change the `Red` color of Windows Console (or `DarkRed` of PowerShell),
-you should modify `ColorTable[04]` instead of `ColorTable[01]`. his is very important,
-wrong color mapping could make your theme ooks bad. To determine that if a theme's
+you should modify `ColorTable[04]` instead of `ColorTable[01]`. This is very important,
+wrong color mapping could make your theme looks bad. To determine that if a theme's
 color mapping is correct, run `git diff` in a dirty it directory, and see
 the diff result. Normally the diff colors should be `Red` and `Green`.
 
@@ -59,8 +60,8 @@ the token (e.g. String, Parameter) of command line has its own color, execute
 `Get-PSReadlineOption` in PowerShell then you will see some attributes like
 `KeywordForegroundColor`, `ParameterForegroundColor`, and they have default values.
 
-Base16 redefined the 16 colors palette, after using a base16 theme, `Red2Red` or
-`BrightMagenta2BrightMagenta` become false. `ColorTable[12]`(`Red` of PowerShell)
+**Base16 redefined the 16 colors palette** (it only provides 8 actual colors and 8 shades of grey),
+so after using a base16 theme, `Red2Red` or `BrightMagenta2BrightMagenta` become false. `ColorTable[12]`(`Red` of PowerShell)
 can be a `orange (#ff9f43)` color in `base16-snazzy` or a `pink` color in another base16 theme,
 or even grayscale (*In Base16, colors base00 to base07 are typically variations of a shade and run from darkest to lightest.*). The 16 colors of Windows Console are **HEAVILY CHANGED** after importing base16 themes,
 and affects the command line tokens colors. Base16 themes break the color mapping,
