@@ -88,10 +88,10 @@ Build
 1. Install build tool, for example:
 
 ``` powershell
-yarn global add base16-builder-typescript
+pip install pybase16-builder
 ```
 
-2. Create workspace and clone base16 sources, follow [base16-builder-typescript] build guides.
+2. Create workspace and clone base16 sources, follow [base16-builder-python] build guides.
 
 Usage
 -----
