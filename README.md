@@ -72,7 +72,7 @@ To solve the readability issue, we have to use [Set-PSReadlineOption]
 to remapping the command line tokens colors to match base16 theme. Below are two screenshots
 show the difference after remapping command line tokens colors (see those two commands).
 
-| Default token colors in base16-tomorrow-night | Remapping token colors in base16-tomorrow-night  |
+| Default token colors in base16-tomorrow-night | Remapped token colors in base16-tomorrow-night  |
 |----------------------|-----------------------|
 | ![without-token-color-mapping.png](docs/without-token-color-mapping.png) | ![with-token-color-mapping.png](docs/with-token-color-mapping.png) |
 
@@ -117,7 +117,9 @@ concfg help
 License
 -------
 
-MIT @ [Chawye Hsu](https://chawyehsu.com)
+**base16-concfg** © [Chawye Hsu](https://github.com/chawyehsu). Released under the [MIT](LICENSE) license.
+
+> [Blog](https://chawyehsu.com) · GitHub [@chawyehsu](https://github.com/chawyehsu) · Twitter [@chawyehsu](https://twitter.com/chawyehsu)
 
 [Set-PSReadlineOption]: https://docs.microsoft.com/en-us/powershell/module/psreadline/Set-PSReadlineOption
 [PSReadline]: https://docs.microsoft.com/en-us/powershell/module/psreadline/
