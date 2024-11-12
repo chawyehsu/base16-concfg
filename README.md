@@ -5,8 +5,9 @@
 [![cicd][cicd-badge]][cicd] [![license][license-badge]](LICENSE)
 
 [concfg] is an utility for importing and exporting [Windows Console] settings
-written in PowerShell. This repository provides a collection of presets that can
-be used with concfg to import color schemes into the Windows Console.
+written in PowerShell. This repository provides a collection of presets, driven by
+the [Base16] specification, that can be used with concfg to import color schemes
+into the Windows Console.
 
 ## Getting Started
 
