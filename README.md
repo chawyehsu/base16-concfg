@@ -2,7 +2,7 @@
 
 > Base16 color schemes for Windows Console
 
-[![license][license-badge]](LICENSE)
+[![cicd][cicd-badge]][cicd] [![license][license-badge]](LICENSE)
 
 [concfg] is an utility for importing and exporting [Windows Console] settings
 written in PowerShell. This repository provides a collection of presets that can
@@ -136,6 +136,8 @@ the token colors remapping. Otherwise it may result in a weird looking console.
 
 > [Blog](https://chawyehsu.com) · GitHub [@chawyehsu](https://github.com/chawyehsu) · Twitter [@chawyehsu](https://twitter.com/chawyehsu)
 
+[cicd-badge]: https://img.shields.io/github/actions/workflow/status/chawyehsu/base16-concfg/update.yml?style=flat&logo=github&logoColor=FFFFFF&colorA=121212&colorB=007EC6
+[cicd]: https://github.com/chawyehsu/base16-concfg/actions/workflows/update.yml
 [license-badge]: https://img.shields.io/github/license/chawyehsu/base16-concfg?style=flat&logo=spdx&logoColor=FFFFFF&colorA=121212&colorB=007EC6
 [concfg]: https://github.com/lukesampson/concfg
 [Windows Console]: https://en.wikipedia.org/wiki/Windows_Console
