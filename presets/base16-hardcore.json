@@ -13,7 +13,7 @@
 	"cyan":         "#cdcdcd",
 	"red":          "#fd971f",
 	"magenta":      "#e8b882",
-	"yellow":       "#4A4A4A",
+	"yellow":       "#4a4a4a",
 	"white":        "#e5e5e5",
 	"screen_colors": "white,black",
 	"popup_colors":  "dark_magenta,gray"
