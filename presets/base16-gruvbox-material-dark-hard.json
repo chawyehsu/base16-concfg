@@ -6,7 +6,7 @@
 	"dark_red":     "#ea6962",
 	"dark_magenta": "#d3869b",
 	"dark_yellow":  "#d8a657",
-	"gray":         "#fbf1c7",
+	"gray":         "#ddc7a1",
 	"dark_gray":    "#2a2827",
 	"blue":         "#bdae93",
 	"green":        "#504945",
@@ -14,7 +14,7 @@
 	"red":          "#e78a4e",
 	"magenta":      "#bd6f3e",
 	"yellow":       "#5a524c",
-	"white":        "#ebdbb2",
-	"screen_colors": "white,black",
-	"popup_colors":  "dark_magenta,gray"
+	"white":        "#fbf1c7",
+	"screen_colors": "gray,black",
+	"popup_colors":  "dark_magenta,white"
 }

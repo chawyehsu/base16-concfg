@@ -15,6 +15,6 @@
 	"magenta":      "#773440",
 	"yellow":       "#282c34",
 	"white":        "#a0a8cd",
-	"screen_colors": "white,black",
-	"popup_colors":  "dark_magenta,gray"
+	"screen_colors": "gray,black",
+	"popup_colors":  "dark_magenta,white"
 }
