@@ -62,7 +62,7 @@ Windows Console (ConHost.exe) only use 16 colors palette, therefore [Base16], wh
 based on 16 colors, is a very good theme solution for ConHost.
 
 Before utilizing base16 themes, one should know that there are color mapping
-difference between Windows Console and other terminals (e.g. *nix terminals).
+difference between Windows Console and other ANSI-based terminals (e.g. *nix terminals).
 The main issue is the order of `ColorTable` of Windows Console **does not** map
 the [ANSI escape color], explained [here]. Because of this, we need to remapping
 it manually. Here is the mapping table.
@@ -84,9 +84,9 @@ it manually. Here is the mapping table.
 | Bright Blue    | \`e[94m          | \`e[104m        | Light Blue   | Blue        | 09         |
 | Bright Magenta | \`e[95m          | \`e[105m        | Light Purple | Magenta     | 13         |
 | Bright Cyan    | \`e[96m          | \`e[106m        | Light Aqua   | Cyan        | 11         |
-| Bright White   | \`e[97m          | \`e[107m        | Brigh tWhite | White       | 15         |
+| Bright White   | \`e[97m          | \`e[107m        | Bright White | White       | 15         |
 
-_*please consider citing the source if you use this table in your project._
+_please consider citing the source if you use this table in your project._
 
 Note that the ANSI Escape Sequences support in Windows Console is only available
 on Windows 10 v1511 (TH2, build 10586) or above, see this [post].
