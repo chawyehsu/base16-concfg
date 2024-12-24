@@ -67,24 +67,24 @@ The main issue is the order of `ColorTable` of Windows Console **does not** map
 the [ANSI escape color], explained [here]. Because of this, we need to remapping
 it manually. Here is the mapping table.
 
-| ANSI/VT name   | ANSI/VT FG Code* | ANSI/VT BG Code | cmd.exe      | PowerShell  | ColorTable |
-|----------------|------------------|-----------------|--------------|-------------|------------|
-| Black          | \`e[30m          | \`e[40m         | Black        | Black       | 00         |
-| Red            | \`e[31m          | \`e[41m         | Red          | DarkRed     | 04         |
-| Green          | \`e[32m          | \`e[42m         | Green        | DarkGreen   | 02         |
-| Yellow         | \`e[33m          | \`e[43m         | Yellow       | DarkYellow  | 06         |
-| Blue           | \`e[34m          | \`e[44m         | Blue         | DarkBlue    | 01         |
-| Magenta        | \`e[35m          | \`e[45m         | Purple       | DarkMagenta | 05         |
-| Cyan           | \`e[36m          | \`e[46m         | Aqua         | DarkCyan    | 03         |
-| White          | \`e[37m          | \`e[47m         | White        | Gray        | 07         |
-| Bright Black   | \`e[90m          | \`e[100m        | Gray         | DarkGray    | 08         |
-| Bright Red     | \`e[91m          | \`e[101m        | Light Red    | Red         | 12         |
-| Bright Green   | \`e[92m          | \`e[102m        | Light Green  | Green       | 10         |
-| Bright Yellow  | \`e[93m          | \`e[103m        | Light Yellow | Yellow      | 14         |
-| Bright Blue    | \`e[94m          | \`e[104m        | Light Blue   | Blue        | 09         |
-| Bright Magenta | \`e[95m          | \`e[105m        | Light Purple | Magenta     | 13         |
-| Bright Cyan    | \`e[96m          | \`e[106m        | Light Aqua   | Cyan        | 11         |
-| Bright White   | \`e[97m          | \`e[107m        | Bright White | White       | 15         |
+| ANSI/VT Color  | ANSI/VT FG Code | ANSI/VT BG Code | cmd.exe      | PowerShell  | ColorTable |
+|----------------|-----------------|-----------------|--------------|-------------|------------|
+| Black          | \`e[30m         | \`e[40m         | Black        | Black       | 00         |
+| Red            | \`e[31m         | \`e[41m         | Red          | DarkRed     | 04         |
+| Green          | \`e[32m         | \`e[42m         | Green        | DarkGreen   | 02         |
+| Yellow         | \`e[33m         | \`e[43m         | Yellow       | DarkYellow  | 06         |
+| Blue           | \`e[34m         | \`e[44m         | Blue         | DarkBlue    | 01         |
+| Magenta        | \`e[35m         | \`e[45m         | Purple       | DarkMagenta | 05         |
+| Cyan           | \`e[36m         | \`e[46m         | Aqua         | DarkCyan    | 03         |
+| White          | \`e[37m         | \`e[47m         | White        | Gray        | 07         |
+| Bright Black   | \`e[90m         | \`e[100m        | Gray         | DarkGray    | 08         |
+| Bright Red     | \`e[91m         | \`e[101m        | Light Red    | Red         | 12         |
+| Bright Green   | \`e[92m         | \`e[102m        | Light Green  | Green       | 10         |
+| Bright Yellow  | \`e[93m         | \`e[103m        | Light Yellow | Yellow      | 14         |
+| Bright Blue    | \`e[94m         | \`e[104m        | Light Blue   | Blue        | 09         |
+| Bright Magenta | \`e[95m         | \`e[105m        | Light Purple | Magenta     | 13         |
+| Bright Cyan    | \`e[96m         | \`e[106m        | Light Aqua   | Cyan        | 11         |
+| Bright White   | \`e[97m         | \`e[107m        | Bright White | White       | 15         |
 
 _please consider citing the source if you use this table in your project._
 
