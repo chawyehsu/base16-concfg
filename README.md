@@ -67,26 +67,29 @@ The main issue is the order of `ColorTable` of Windows Console **does not** map
 the [ANSI escape color], explained [here]. Because of this, we need to remapping
 it manually. Here is the mapping table.
 
-| ANSI/VT Color  | ANSI/VT FG Code | ANSI/VT BG Code | cmd.exe      | PowerShell  | ColorTable |
-|----------------|-----------------|-----------------|--------------|-------------|------------|
-| Black          | \`e[30m         | \`e[40m         | Black        | Black       | 00         |
-| Red            | \`e[31m         | \`e[41m         | Red          | DarkRed     | 04         |
-| Green          | \`e[32m         | \`e[42m         | Green        | DarkGreen   | 02         |
-| Yellow         | \`e[33m         | \`e[43m         | Yellow       | DarkYellow  | 06         |
-| Blue           | \`e[34m         | \`e[44m         | Blue         | DarkBlue    | 01         |
-| Magenta        | \`e[35m         | \`e[45m         | Purple       | DarkMagenta | 05         |
-| Cyan           | \`e[36m         | \`e[46m         | Aqua         | DarkCyan    | 03         |
-| White          | \`e[37m         | \`e[47m         | White        | Gray        | 07         |
-| Bright Black   | \`e[90m         | \`e[100m        | Gray         | DarkGray    | 08         |
-| Bright Red     | \`e[91m         | \`e[101m        | Light Red    | Red         | 12         |
-| Bright Green   | \`e[92m         | \`e[102m        | Light Green  | Green       | 10         |
-| Bright Yellow  | \`e[93m         | \`e[103m        | Light Yellow | Yellow      | 14         |
-| Bright Blue    | \`e[94m         | \`e[104m        | Light Blue   | Blue        | 09         |
-| Bright Magenta | \`e[95m         | \`e[105m        | Light Purple | Magenta     | 13         |
-| Bright Cyan    | \`e[96m         | \`e[106m        | Light Aqua   | Cyan        | 11         |
-| Bright White   | \`e[97m         | \`e[107m        | Bright White | White       | 15         |
+_Please consider citing the source if you use this table in your project:_
 
-_please consider citing the source if you use this table in your project._
+| ANSI/VT Color  | ANSI/VT FG Code | ANSI/VT BG Code | cmd.exe*     | PowerShell**  | ColorTable |
+|----------------|-----------------|-----------------|--------------|---------------|------------|
+| Black          | \`e[30m         | \`e[40m         | Black        | Black         | 00         |
+| Red            | \`e[31m         | \`e[41m         | Red          | DarkRed       | 04         |
+| Green          | \`e[32m         | \`e[42m         | Green        | DarkGreen     | 02         |
+| Yellow         | \`e[33m         | \`e[43m         | Yellow       | DarkYellow    | 06         |
+| Blue           | \`e[34m         | \`e[44m         | Blue         | DarkBlue      | 01         |
+| Magenta        | \`e[35m         | \`e[45m         | Purple       | DarkMagenta   | 05         |
+| Cyan           | \`e[36m         | \`e[46m         | Aqua         | DarkCyan      | 03         |
+| White          | \`e[37m         | \`e[47m         | White        | Gray          | 07         |
+| Bright Black   | \`e[90m         | \`e[100m        | Gray         | DarkGray      | 08         |
+| Bright Red     | \`e[91m         | \`e[101m        | Light Red    | Red           | 12         |
+| Bright Green   | \`e[92m         | \`e[102m        | Light Green  | Green         | 10         |
+| Bright Yellow  | \`e[93m         | \`e[103m        | Light Yellow | Yellow        | 14         |
+| Bright Blue    | \`e[94m         | \`e[104m        | Light Blue   | Blue          | 09         |
+| Bright Magenta | \`e[95m         | \`e[105m        | Light Purple | Magenta       | 13         |
+| Bright Cyan    | \`e[96m         | \`e[106m        | Light Aqua   | Cyan          | 11         |
+| Bright White   | \`e[97m         | \`e[107m        | Bright White | White         | 15         |
+
+_* you can type `color /?` in cmd.exe to view the naming definition._  
+_** you can type `[Enum]::GetValues([System.ConsoleColor])` to enumerate the color names in powershell._
 
 Note that the ANSI Escape Sequences support in Windows Console is only available
 on Windows 10 v1511 (TH2, build 10586) or above, see this [post].
