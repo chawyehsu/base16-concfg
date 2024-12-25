@@ -1,6 +1,6 @@
 # base16-concfg
 
-> Base16 color schemes for Windows Console
+> Base16 color schemes for Windows Console (concfg/conhost.exe/cmd.exe/PowerShell/OpenConsole.exe)
 
 [![cicd][cicd-badge]][cicd] [![license][license-badge]](LICENSE)
 
