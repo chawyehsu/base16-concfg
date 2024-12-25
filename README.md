@@ -56,7 +56,7 @@ though only the base16 spec is supported in this repository.
 
 ## Knowledge
 
-### Color Mapping
+### Color mapping
 
 Windows Console (ConHost.exe) only use 16 colors palette, therefore [Base16], which
 based on 16 colors, is a very good theme solution for ConHost.
@@ -102,7 +102,7 @@ To determine that if a color scheme's color mapping works correctly, you may run
 `git diff` in a dirty git directory and see the diff result. Normally there should
 only be red and green colors in the diff result.
 
-### About command line token colors
+### Optional token colors remapping
 
 Since PowerShell 5, [PSReadline] brings command line tokens colors feature,
 tokens (e.g. String, Parameter) of command line get their own colors. Run
@@ -116,19 +116,20 @@ use 8 colors and 8 shades of grey, and it redefined the colors palette led to a
 significant color mapping difference - e.g. `Red` of PowerShell may not be a red
 color anymore).
 
-While some users might not notice the token colors, in order to address this issue, [Set-PSReadlineOption] may be used to remap the command line tokens colors to match
+While some users might not notice the token colors, in order to address this issue,
+[Set-PSReadlineOption] may be used to remap the command line tokens colors to match
 the base16 theme. Below are two screenshots showing the difference after remapping
 command line tokens colors (see those two commands).
 
 **Example** (using the `base16-tomorrow-night` theme):
 
-| Default token colors | Remapped token colors |
-|----------------------|-----------------------|
-| ![without-token-color-mapping.png](docs/without-token-color-mapping.png) | ![with-token-color-mapping.png](docs/with-token-color-mapping.png) |
+| Default token colors               | Remapped token colors           |
+|------------------------------------|---------------------------------|
+| ![without-token-color-mapping.png] | ![with-token-color-mapping.png] |
 
 I've created a PowerShell script to make it easier to do this job, you can take
-a look at [`command-line-token-color-mapping.ps1`](scripts/command-line-token-color-mapping.ps1)
-in the scripts directory of this repository. The script has been [integrated](https://github.com/lukesampson/concfg/pull/46) into concfg so it is also available via `concfg tokencolor`.
+a look at [`tokencolor.ps1`] in the scripts directory of this repository. The
+script has been [integrated] into concfg so it is also available via `concfg tokencolor`.
 
 Token colors remapping is optional, you can choose to use it or not. But if you
 switched to another theme that is not base16 based, you probably need to disable
@@ -153,3 +154,7 @@ the token colors remapping. Otherwise it may result in a weird looking console.
 [tinted-builder-rust]: https://github.com/tinted-theming/tinted-builder-rust
 [ANSI escape color]: https://en.wikipedia.org/wiki/ANSI_escape_code#Colors
 [here]: https://github.com/dotnet/corefx/blob/5e36ca02d2594f715da829aafaf7af2b554dfcdf/src/System.Console/src/System/ConsolePal.Unix.cs#L577-L603
+[without-token-color-mapping.png]: resources/without-token-color-mapping.png
+[with-token-color-mapping.png]: resources/with-token-color-mapping.png
+[`tokencolor.ps1`]: resources/tokencolor.ps1
+[integrated]: https://github.com/lukesampson/concfg/pull/46
