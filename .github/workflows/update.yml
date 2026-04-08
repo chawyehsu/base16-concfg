@@ -15,10 +15,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
       - name: Tinted Builder Rust
-        uses: tinted-theming/tinted-builder-rust@v0.13.1
+        uses: tinted-theming/tinted-builder-rust@d1cae2ede8dbf089b3d37fe87f60cb21e792968e # v0.14.1
 
       - name: Commit
         run: |

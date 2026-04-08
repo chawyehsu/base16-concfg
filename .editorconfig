@@ -11,5 +11,5 @@ insert_final_newline = true
 [*.md]
 trim_trailing_whitespace = false
 
-[.github/workflows/*.{yaml,yml}]
+[.github/**/*.{yaml,yml}]
 indent_size = 2
