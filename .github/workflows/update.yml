@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
 
       - name: Tinted Builder Rust
-        uses: tinted-theming/tinted-builder-rust@d1cae2ede8dbf089b3d37fe87f60cb21e792968e # v0.14.1
+        uses: tinted-theming/tinted-builder-rust@9055401be7e8a4b869c780589e6f41cffb87023c # v0.21.0
 
       - name: Commit
         run: |
